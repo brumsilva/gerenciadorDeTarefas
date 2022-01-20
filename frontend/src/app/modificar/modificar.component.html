@@ -1,0 +1,29 @@
+<div class="addContainer">
+  <div class="addContainer-border"></div>
+  <div class="addContainer-content">
+    <form>
+      <h5>Adicionar um novo nome no seu deathnote</h5>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">assignment_turned_in</i>
+              <input id="icon_prefix" type="text" class="validate" [(ngModel)]="tarefa.descricao" name="descricao">
+              <label for="icon_prefix">Quem você quer inserir no seu deathnote?</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">sentiment_satisfied</i>
+              <textarea id="textarea1" class="materialize-textarea" [(ngModel)]="tarefa.obs" name="obs"></textarea>
+              <label for="textarea1">O que você quer que aconteça?</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a class="btn-floating btn-large waves-effect waves-light black" (click)='modificar()'><i
+      class="material-icons">edit
+    </i></a>
+    </form>
+  </div>
+</div>
+
+

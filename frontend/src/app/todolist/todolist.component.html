@@ -1,0 +1,38 @@
+<div class="todoContainer">
+  <div class="todoContainer-border"></div>
+  <div class="todoContainer-content">
+    <div class="todoContainer-content-title" >
+      <h3>Listinha de "acasos"</h3>
+    </div>
+    <div class=" todoContainer-content-table">
+      <table class="centered responsive-table" id="responsiveTable">
+        <thead>
+          <tr>
+              <th>
+                <label>
+                <input type="checkbox" checked="checked" disabled="disabled"/>
+                <span></span>
+              </label></th>
+              <th>Nome</th>
+              <th>O que vai acontecer?</th>
+              <th colspan="2">Poderes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let item of listarTarefas">
+            <td>
+              <label>
+                <input type="checkbox" class="filled"/>
+                <span></span>
+              </label>
+            </td>
+            <td>{{item.descricao}}</td>
+            <td>{{item.obs}}</td>
+            <td> <a class="btn-floating btn-small waves-effect waves-light grey darken-4"><i class="material-icons" (click)="editar(item.id_tarefa)">create</i></a></td>
+            <td> <a class="btn-floating btn-small waves-effect waves-light grey darken-4"><i class="material-icons" (click)="excluir(item.id_tarefa)">delete</i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
